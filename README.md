@@ -1,6 +1,7 @@
 # urn~
 
 pdlua external for urn model random number generation.
+requires `pdlua` - see https://github.com/agraef/pd-lua
 
 ### arguments
 * `<int>` - numbers will be picked from 0 to n-1
