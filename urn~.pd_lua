@@ -14,7 +14,6 @@ function urn:in_1_reset()
     self.deck[i] = i-1
   end
   self.range = self.count
-  self.held = 0
 end
 
 function urn:dsp(samplerate, blocksize)
