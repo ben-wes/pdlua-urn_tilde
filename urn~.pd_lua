@@ -20,16 +20,16 @@ function urn:in_1_reset()
   self.range = self.count
 end
 
+function urn:in_1_seed(atoms)
+  local seed = type(atoms[1]) == "number" and atoms[1] or os.time()
+  math.randomseed(seed)
+end
+
 function urn:dsp(samplerate, blocksize)
   self.impulse_out = {}
   for i = 1, blocksize do
     self.impulse_out[i] = 0
   end
-end
-
-function urn:in_1_seed(atoms)
-  local seed = type(atoms[1]) == "number" and atoms[1] or os.time()
-  math.randomseed(seed)
 end
 
 function urn:perform(in1, in2) -- impulse, seed input
